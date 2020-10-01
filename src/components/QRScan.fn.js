@@ -117,28 +117,15 @@ export function checkPermission({ list, code }) {
     // throw Error('navigator.permissions is undefined')
     return
   }
-  navigator.permissions
-    .query({ name: 'camera' })
-    .then(permissionObj => {
-      if (permissionObj.state === 'denied') {
-        notify('카메라 사용권한을 승인해 주세요')
-        // Modal.warn({
-        //   title: '사용권한 필요',
-        //   content: '카메라 사용권한을 승인해 주세요',
-        // })
-      }
-    })
-    .catch(error => {
-      window.$logger.debug('user22', list.join(','))
-      req.post('/api/report-error', {
-        message: error.message,
-        user: list.join(','), // list.map(path(['name'])).join(','),
-        userAgent: navigator.userAgent,
-        location: '[QRScan.fn.js] permission check',
-      })
-      console.error(error)
-      throw Error(error)
-    })
+  navigator.permissions.query({ name: 'camera' }).then(permissionObj => {
+    if (permissionObj.state === 'denied') {
+      notify('카메라 사용권한을 승인해 주세요')
+      // Modal.warn({
+      //   title: '사용권한 필요',
+      //   content: '카메라 사용권한을 승인해 주세요',
+      // })
+    }
+  })
 }
 
 export function enableCamera({ list, setVideo }) {
