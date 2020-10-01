@@ -5,14 +5,6 @@ import { mediaPolyfill } from '../utils/mediaPolyfill'
 import { getQueryParams } from 'mingutils'
 import { churchId, notify } from '../biz'
 
-export async function checkMany(code, list) {
-  await req.post('/api/check-many', {
-    church: churchId(),
-    meetingId: code,
-    list,
-  })
-}
-
 export function createDrawLine(canvas) {
   return (begin, end, color) => {
     canvas.beginPath()
@@ -112,22 +104,12 @@ export function createTick({ setMessage, history }) {
     setMessage(code.data)
     if (!code.data.startsWith('http')) {
       // 주소값이 아니면 스캐닝 계속
-      notify('유효한 코드가 아닙니다(Not a link)')
       requestAnimationFrame(() => tick({ canvasElement, video }))
       return
     }
-    // console.log('getQueryParams(code.data)', getQueryParams(code.data))
 
-    const codeValue = getQueryParams(code.data).code
-    const { result, message } = validCode(codeValue)
-    if (!codeValue || !result) {
-      notify('유효한 코드가 아닙니다(' + message + ')')
-      // 주소값은 맞는데 code 가 포함되어 있지 않으면 계속 스캐닝
-      requestAnimationFrame(() => tick({ canvasElement, video }))
-      return
-    }
     videoOff(video)
-    history.push('/?code=' + codeValue)
+    window.location.href = code.data
   }
 }
 
