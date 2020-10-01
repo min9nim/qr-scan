@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "video": false,
+  "videosFolder": " cypress/videos",
+  "screenshotOnRunFailure": false,
+  "viewportWidth": 350,
+  "viewportHeight": 600
+}

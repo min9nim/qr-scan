@@ -1,0 +1,21 @@
+pwa-install::part(openButton) {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.85);
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.userInfo {
+  .name {
+    .ant-col.ant-col-4.ant-form-item-label {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.ant-notification-notice-message {
+  font-size: 18px;
+  color: #555;
+}

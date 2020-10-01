@@ -1,0 +1,22 @@
+.userInfo {
+  .title {
+    text-align: center;
+    vertical-align: top;
+    span {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    sup {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+  text-align: left;
+  hr {
+    margin-top: 50px;
+  }
+  .button {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

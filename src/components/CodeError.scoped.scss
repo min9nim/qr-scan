@@ -1,0 +1,26 @@
+.codeError {
+  padding: 20px;
+  text-align: center;
+  .header {
+    sup {
+      font-size: 14px;
+    }
+    .title {
+      color: #777;
+      margin-right: 5px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .time {
+    font-style: italic;
+    padding: 0;
+  }
+
+  .desc {
+    color: #666;
+    padding: 20px 0 0 0;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
