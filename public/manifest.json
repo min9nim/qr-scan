@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "QRScan",
+ "short_name": "QRCode Scanner",
+ "description": "QRCode Scanner",
+ "display": "standalone",
+ "start_url": "/",
+ "features": ["No ads", "Online QRCode scanner"],
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
