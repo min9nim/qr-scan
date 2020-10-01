@@ -1,9 +1,7 @@
 import req from '../utils/req'
 import jsQR from 'jsqr'
-import { validCode } from '../utils'
 import { mediaPolyfill } from '../utils/mediaPolyfill'
-import { getQueryParams } from 'mingutils'
-import { churchId, notify } from '../biz'
+import { notify } from '../biz'
 
 export function createDrawLine(canvas) {
   return (begin, end, color) => {
@@ -114,9 +112,6 @@ export function createTick({ setMessage, history }) {
 }
 
 export function checkPermission({ list, code }) {
-  if (!list || validCode(code).result) {
-    return
-  }
   if (!navigator.permissions) {
     // notify('navigator.permissions is undefined')
     // throw Error('navigator.permissions is undefined')
