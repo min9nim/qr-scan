@@ -1,6 +1,6 @@
 {
-  "name": "qr-check",
-  "version": "2.0.0",
+  "name": "qr-scan",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
   "scripts": {
@@ -9,8 +9,6 @@
     "test": "craco test",
     "test:ci": "CI=true craco test --env=jsdom",
     "test:coverage": "yarn test:ci --coverage",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
     "lint": "eslint src",
     "reformat": "prettier --write",
     "eject": "react-scripts eject"
@@ -54,8 +52,7 @@
     "react-dynamic-route": "0.0.13",
     "react-hook-loading": "^0.0.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "sweetalert2": "^9.17.0"
+    "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -68,7 +65,6 @@
     "@types/react-router-dom": "^5.1.5",
     "craco": "^0.0.3",
     "craco-plugin-scoped-css": "^1.1.0",
-    "cypress": "^5.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
