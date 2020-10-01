@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         />
       </pwa-install>
       <div className="title">
-        <QrcodeOutlined /> QR code scan
+        <QrcodeOutlined /> QR code scanner
       </div>
       {children}
     </main>
