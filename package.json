@@ -56,8 +56,7 @@
     "react-hook-loading": "^0.0.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "sweetalert2": "^9.17.0",
-    "swr": "^0.3.2"
+    "sweetalert2": "^9.17.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
